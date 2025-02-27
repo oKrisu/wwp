@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-translate="title">Interaktywna Strona</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  </script>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo1.png" alt="Logo Wirtualny Pokój Przesłuchań">
+    </div>
+    <div class="nav-links">
+      <a href="#about-project" class="nav-link">O projekcie</a>
+      <a href="#contact" class="nav-link">Kontakt</a>
+      <a href="#team" class="nav-link">Nasz zespół</a>
+    </div>
+    <div class="options">
+      <button id="language-toggle" data-translate="language-toggle">Polski / English</button>
+      <button id="font-size-toggle" data-translate="font-size-toggle">A+</button>
+      <button id="theme-toggle" data-translate="theme-toggle">🌙 / ☀️</button>
+    </div>
+  </nav>
+
+  <!-- HERO IMAGE -->
+  <div class="hero-image"></div>
+
+  <!-- GŁÓWNA SEKCJA -->
+  <div class="main-container">
+    <aside class="sidebar">
+      <button class="menu-btn" onclick="showContent('info1')" data-translate="info1">Czym jest przesłuchanie dziecka?</button>
+      <button class="menu-btn" onclick="showContent('info2')" data-translate="info2">Prawa i obowiązki dziecka podczas przesłuchania</button>
+      <button class="menu-btn" onclick="showContent('find-room')" data-translate="find-room">Znajdź swój pokój przesłuchań</button>
+      <button class="menu-btn" onclick="showContent('victims')" data-translate="victims">Dla osób pokrzywdzonych przestępstwami na tle seksualnym</button>
+      <button class="menu-btn" onclick="showContent('parents')" data-translate="parents">Dla rodziców/opiekunów przesłuchiwanych dzieci</button>
+      <button class="menu-btn" onclick="showContent('art185')" data-translate="art185">Dla osób przesłuchiwanych w trybie art. 185e k.p.k.</button>
+      <button class="menu-btn" onclick="showContent('judges')" data-translate="judges">Dla sędziów</button>
+      <button class="menu-btn" onclick="showContent('prosecutors')" data-translate="prosecutors">Dla prokuratorów</button>
+      <button class="menu-btn" onclick="showContent('representatives')" data-translate="representatives">Dla reprezentantów dziecka</button>
+      <button class="menu-btn" onclick="showContent('attorneys')" data-translate="attorneys">Dla pełnomocników</button>
+      <button class="menu-btn" onclick="showContent('defenders')" data-translate="defenders">Dla obrońców</button>
+      <button class="menu-btn" onclick="showContent('psychologists')" data-translate="psychologists">Dla biegłych psychologów</button>
+      <button class="menu-btn" onclick="showContent('hearing')" data-translate="hearing">Wysłuchanie dziecka</button>
+    </aside>
+
+    <section class="content" id="content-area" data-translate="default-content">
+      <p><i>(Tu jest miejsce na treści, które pojawią się po naciśnięciu odpowiedniego kafelka z lewej strony)</i></p>
+    </section>
+  </div>
+
+  <!-- OBRAZ MIĘDZY SEKCJAMI -->
+  <div class="full-width-image"></div>
+
+  <!-- STOPKA -->
+  <footer class="footer" data-translate="footer-text">
+    <p><i>Miejsce na informacje o sposobie kontaktu, informacje o naszym zespole (krótkie notki o tych osobach) itp.</i></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
