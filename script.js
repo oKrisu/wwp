@@ -1,3 +1,5 @@
+"use strict";
+
 const translations = {
 	"pl": {
 	  "title": "Interaktywna Strona",
@@ -31,7 +33,7 @@ const translations = {
 function translatePage(lang) {
 	document.querySelectorAll("[data-translate]").forEach(element => {
 	  const key = element.getAttribute("data-translate");
-	  if (translations[lang][key]) {
+	  if (translations[lang] && translations[lang][key]) {
 		element.innerHTML = translations[lang][key];
 	  }
 	});
@@ -54,7 +56,7 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
 	document.body.classList.toggle('dark-theme');
 });
 
-// Funkcja dynamicznej zmiany treści po kliknięciu w zakładki
+// Funkcja dynamicznej zmiany treści po kliknięciu w przyciski
 function showContent(section) {
 	const contentArea = document.getElementById('content-area');
 
@@ -72,10 +74,12 @@ function showContent(section) {
 		</select>
 		<div id="locations"></div>
 	  `
+	  // Możesz dodać kolejne sekcje zgodnie z potrzebą
 	};
 
-	// Jeśli sekcja istnieje w obiekcie contentData, wyświetlamy ją, w przeciwnym razie "Brak treści"
-	contentArea.innerHTML = contentData[section] || "<p>Brak treści.</p>";
+	contentArea.innerHTML = contentData.hasOwnProperty(section)
+	  ? contentData[section]
+	  : "<p>Brak treści.</p>";
 	translatePage(document.documentElement.lang);
 }
 
@@ -90,7 +94,7 @@ function showLocations() {
 	  "gdansk": ["ul. Długa 21, Gdańsk"]
 	};
 
-	locationsDiv.innerHTML = city in locations 
+	locationsDiv.innerHTML = locations[city]
 	  ? `<div class="city-address"><span data-translate="address-label">Adres:</span> ${locations[city][0]}</div>`
 	  : "";
 }

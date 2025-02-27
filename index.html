@@ -4,34 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-translate="title">Interaktywna Strona</title>
+  <meta name="description" content="Interaktywna strona dotycząca przesłuchań dzieci i wsparcia dla różnych grup społecznych.">
+  <meta name="keywords" content="przesłuchanie, dziecko, prawa, obowiązki, interaktywna strona">
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="Interaktywna Strona">
+  <meta property="og:description" content="Interaktywna strona dotycząca przesłuchań dzieci i wsparcia dla różnych grup społecznych.">
+  <meta property="og:image" content="logo1.png">
+  <meta property="og:type" content="website">
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <nav class="navbar" role="navigation">
+      <div class="logo">
+        <img src="logo1.png" alt="Logo Wirtualny Pokój Przesłuchań – symbol tożsamości serwisu" loading="lazy">
+      </div>
+      <div class="nav-links">
+        <a href="#about-project" class="nav-link">O projekcie</a>
+        <a href="#contact" class="nav-link">Kontakt</a>
+        <a href="#team" class="nav-link">Nasz zespół</a>
+      </div>
+      <div class="options">
+        <button id="language-toggle" aria-label="Przełącz język" data-translate="language-toggle">Polski / English</button>
+        <button id="font-size-toggle" aria-label="Powiększ czcionkę" data-translate="font-size-toggle">A+</button>
+        <button id="theme-toggle" aria-label="Przełącz motyw" data-translate="theme-toggle">🌙 / ☀️</button>
+      </div>
+    </nav>
+  </header>
 
-  </script>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="logo1.png" alt="Logo Wirtualny Pokój Przesłuchań">
-    </div>
-    <div class="nav-links">
-      <a href="#about-project" class="nav-link">O projekcie</a>
-      <a href="#contact" class="nav-link">Kontakt</a>
-      <a href="#team" class="nav-link">Nasz zespół</a>
-    </div>
-    <div class="options">
-      <button id="language-toggle" data-translate="language-toggle">Polski / English</button>
-      <button id="font-size-toggle" data-translate="font-size-toggle">A+</button>
-      <button id="theme-toggle" data-translate="theme-toggle">🌙 / ☀️</button>
-    </div>
-  </nav>
-
-  <!-- HERO IMAGE -->
-  <div class="hero-image"></div>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-image" role="img" aria-label="Pokój przesłuchań" style="background-image: url('room1.png');"></div>
+  </section>
 
   <!-- GŁÓWNA SEKCJA -->
-  <div class="main-container">
-    <aside class="sidebar">
+  <main class="main-container">
+    <aside class="sidebar" role="complementary">
       <button class="menu-btn" onclick="showContent('info1')" data-translate="info1">Czym jest przesłuchanie dziecka?</button>
       <button class="menu-btn" onclick="showContent('info2')" data-translate="info2">Prawa i obowiązki dziecka podczas przesłuchania</button>
       <button class="menu-btn" onclick="showContent('find-room')" data-translate="find-room">Znajdź swój pokój przesłuchań</button>
@@ -50,10 +60,12 @@
     <section class="content" id="content-area" data-translate="default-content">
       <p><i>(Tu jest miejsce na treści, które pojawią się po naciśnięciu odpowiedniego kafelka z lewej strony)</i></p>
     </section>
-  </div>
+  </main>
 
   <!-- OBRAZ MIĘDZY SEKCJAMI -->
-  <div class="full-width-image"></div>
+  <section class="full-width-section">
+    <div class="full-width-image" role="img" aria-label="Ilustracja pokoju przesłuchań" style="background-image: url('kor1.png');"></div>
+  </section>
 
   <!-- STOPKA -->
   <footer class="footer" data-translate="footer-text">

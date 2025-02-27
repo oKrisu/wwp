@@ -1,26 +1,78 @@
+/* Podstawowy styl i czcionka z Google Fonts */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-  }
-  
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
 
-  /* NAVBAR - Linki */
+/* Reguła dla powiększonej czcionki */
+.large-font {
+  font-size: 1.2em;
+}
+
+/* GŁÓWNA SEKCJA */
+.main-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar – przyjazny wygląd dla dzieci */
+.sidebar {
+  width: 30%;
+  background: #e3f2fd; /* Pastelowy błękit */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Nowoczesne przyciski menu */
+.menu-btn {
+  background: #ffffff;
+  color: #0277bd;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: #81d4fa;
+  transform: scale(1.03);
+}
+
+/* Sekcja content – przejrzysta i nowoczesna */
+.content {
+  width: 70%;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Pozostałe style (Navbar, hero, stopka itd.) */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
 .nav-links {
   display: flex;
   gap: 15px;
@@ -46,175 +98,116 @@ body {
   color: black;
 }
 
-  
-  /* Stylizacja logo */
-  .logo img {
-    height: 40px; /* Dostosowanie wysokości logo */
-    width: auto;
-    display: block;
-  }
-  
-  .navbar .options {
-    display: flex;
-    gap: 10px;
-    margin-right: 40px;
-  }
-  
-  .navbar .options button {
-    background: none;
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: 0.3s;
-  }
-  
-  .navbar .options button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Hero Image - Obraz na górze strony */
-/* Hero Image - Obraz na górze strony */
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.navbar .options {
+  display: flex;
+  gap: 10px;
+  margin-right: 40px;
+}
+
+.navbar .options button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.navbar .options button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* HERO SECTION */
 .hero-image {
   width: 100%;
-  height: 70vh; /* Wysokość zmniejszona do połowy ekranu */
-  max-height: 500px; /* Maksymalna wysokość, aby nie był za duży na dużych ekranach */
-  background-image: url('room1.png');
+  height: 70vh;
+  max-height: 500px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-  
-  
-  
-  /* GŁÓWNA SEKCJA */
-  .main-container {
-    display: flex;
-    width: 100vw; /* Pełna szerokość ekranu */
-    padding: 0; /* Usunięcie marginesów */
-    align-items: stretch; /* Sidebar i treść mają tę samą wysokość */
-  }
-  
-  .sidebar {
-    width: 30%; /* Sidebar zajmuje 30% szerokości sekcji */
-    height: 100%; /* Pełna wysokość w obrębie sekcji */
-    background: #f8c8dc;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  /* Treść obok sidebaru */
-  .content {
-    width: 70%; /* Pozostałe 70% szerokości */
-    padding: 20px;
-    background: #faebd7;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .menu-btn {
-    background: #d88;
-    color: black;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: 0.3s;
-    text-align: left;
-  }
-  
-  .menu-btn:hover {
-    background: #c66;
-  }
-  
-  /* STOPKA */
-  .footer {
-    width: 100%;
-    padding: 20px;
-    background: #fff;
-    text-align: center;
-    border-top: 2px solid #ddd;
-    font-style: italic;
-  }
-  
-  /* Tryb ciemny */
-.dark-theme {
-    background-color: #222;
-    color: #fff;
-  }
-  
-  .dark-theme .content {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .dark-theme .sidebar {
-    background-color: #444;
-  }
-  
-  .dark-theme .menu-btn {
-    background: #666;
-    color: #fff;
-  }
-  
-  .dark-theme .menu-btn:hover {
-    background: #777;
-  }
-  
-  .dark-theme .footer {
-    background: #222;
-    color: #ccc;
-  }
-  
-  /* Powiększona czcionka */
-  .large-font {
-    font-size: 1.2em;
-  }
-  .city-label {
-    font-size: 18px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .city-select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .city-address {
-    margin-top: 15px;
-    padding: 10px;
-    background: #eee;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-
-  /* DOLNY OBRAZ - Wyrównany do góry + przewijanie */
+/* DOLNY OBRAZ */
 .full-width-image {
-    width: 100%;
-    height: 700px; /* Możesz dostosować wysokość */
-    background-image: url('kor1.png');
-    background-size: cover; /* Rozciągnięcie obrazu */
-    background-position: top center; /* Obraz zaczyna się od góry */
-    background-attachment: fixed; /* Efekt przewijania */
-    background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
-  
-  
-  /* Usunięcie ewentualnych marginesów z sekcji powyżej i poniżej */
-  .main-container {
-    margin-bottom: 0;
-  }
-  
-  .footer {
-    margin-top: 0;
-  }
-  
+
+/* Stopka */
+.footer {
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+  border-top: 2px solid #ddd;
+  font-style: italic;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+.main-container {
+  flex-direction: column;
+}
+.sidebar, .content {
+  width: 100%;
+}
+}
+
+/* Focus styles dla dostępności */
+button:focus, a:focus, select:focus {
+  outline: 2px dashed #ffcc00;
+  outline-offset: 2px;
+}
+
+/* Dark Theme Styles */
+.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-theme .navbar {
+  background-color: #1e1e1e;
+}
+
+.dark-theme .nav-link {
+  color: #e0e0e0;
+}
+
+.dark-theme .nav-link:hover {
+  color: #ffcc00;
+}
+
+.dark-theme .sidebar {
+  background: #1e1e1e;
+}
+
+.dark-theme .menu-btn {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-theme .menu-btn:hover {
+  background: #444;
+}
+
+.dark-theme .content {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.dark-theme .footer {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
